@@ -26,7 +26,7 @@
   "scripts": {
     "build": "tsc -b -f",
     "dev": "tsc -b -w -v",
-    "esb": "rm -rf bin && node ./scripts/esb.mjs ",
+    "esb": "rm -rf dist && node ./scripts/esb.mjs ",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:type": "tsc --noEmit",
@@ -57,7 +57,16 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "hexo": "^7.1.1"
+    "htmlnano": "^2.1.0",
+    "micromatch": "^4.0.5"
+  },
+  "peerDependenciesMeta": {
+    "htmlnano": {
+      "optional": false
+    },
+    "micromatch": {
+      "optional": false
+    }
   },
   "packageManager": "pnpm@8.15.1+sha256.245fe901f8e7fa8782d7f17d32b6a83995e2ae03984cb5b62b8949bfdc27c7b5",
   "engines": {
